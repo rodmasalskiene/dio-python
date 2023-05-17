@@ -4,23 +4,13 @@ count = 0
 encaixa = True
 
 while(count < N):
-  A = str(input())
-  B = str(input())
-  i = -1
-  while B[i] is not B[0] and A[i] is not A[0]:
-    if B[i] != A[i]:
-      encaixa = False
-      break
-    else:
-      i = i - 1
-  else:
-    if B[i] == B[0] or A[i] != A[0]:
-      encaixa = True
-    else:
-      encaixa = False
-  if encaixa == True:
-    count = count + 1
+  entrada = input()
+  A = entrada.split()[0]
+  B = entrada.split()[1]
+  
+  if A.endswith(B):
     print("encaixa")
   else:
-    count = count + 1
     print("nao encaixa")
+
+  count = count + 1
